@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Register from "./Register";
 
 const Login = () => {
@@ -28,7 +28,7 @@ const Login = () => {
                 <nav>
                 <Link to='/Register'>Register</Link>
                 </nav>
-                
+                <Outlet />
                 <button onClick={() => setRegister(true)}>Register</button>
                 
                 {isRegister? <Register />:null}
